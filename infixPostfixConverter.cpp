@@ -9,3 +9,12 @@ int infixToPostfix::precendence(char op) {
 	}
 	return 0;
 }
+
+string infixToPostfix::converter(string infix) {
+	string postfix;
+	for (int i = 0; i < infix.length(); i++) {
+		char cInfo = infix[i];
+		cout << cInfo;
+	}
+	return postfix;
+}
