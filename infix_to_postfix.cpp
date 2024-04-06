@@ -10,6 +10,6 @@ int main()
 {
 	string pee = "waaaa aaa 111";
 	infixToPostfix test;
-	test.converter(pee);
+	cout << test.converter(pee);
 }
 
