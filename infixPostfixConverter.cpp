@@ -22,9 +22,19 @@ int infixToPostfix::precendence(char op) {
 string infixToPostfix::converter(string infix) {
 	string postfix;
 	for (int i = 0; i < infix.length(); i++) {
-		char cInfo = infix[i];
-		if (isalpha(cInfo)) {
-			postfix += cInfo;
+		char sym = infix[i];
+		if (isalpha(sym)) {
+			postfix += sym;
+		}
+		else if (sym == '(') {
+			operators.push(sym);
+		}
+		else if (sym == ')') {
+			while (operators.top() != '(' && !operators.empty()) {
+				postfix += operators.top();
+				operators.pop();
+			}
+			operators.pop();
 		}
 	}
 	return postfix;

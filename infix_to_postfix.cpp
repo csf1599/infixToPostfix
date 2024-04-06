@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	string pee = "waaaa aaa 111";
+	string pee = "wa+(b+c)+a";
 	infixToPostfix test;
 	cout << test.converter(pee);
 }
