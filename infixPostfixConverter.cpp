@@ -36,6 +36,14 @@ string infixToPostfix::converter(string infix) {
 			}
 			operators.pop();
 		}
+		else {
+			while (!infix.empty() && precendence(sym) <= operators.top()) {
+				postfix += operators.top();
+				operators.pop();
+			}
+			postfix += sym;
+
+		}
 	}
 	return postfix;
 }
