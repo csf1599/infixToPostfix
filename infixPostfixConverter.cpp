@@ -36,9 +36,9 @@ string infixToPostfix::converter(string infix) {
 			}
 			operators.pop();
 		}
-		//else if (sym == ' ') {
-		//	i++;
-		//}
+		else if (sym == ' ') {
+			continue;
+		}
 		else{
 			while (!operators.empty() && precendence(operators.top()) >= precendence(sym)) {
 				postfix += operators.top();
