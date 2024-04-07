@@ -8,8 +8,15 @@ using namespace std;
 
 int main()
 {
-	string pee = "a + b - c";
+	string infix = "a + b - c";
 	infixToPostfix test;
-	cout << test.converter(pee);
+	cout << "infix expression : " << infix << endl;
+	cout << "postfix expression : ";
+	cout << test.converter(infix);
+	cout << endl;
+	infix = "a + b * c";
+	cout << "infix expression : " << infix << endl;
+	cout << "postfix expression : ";
+	cout << test.converter(infix);
 }
 
