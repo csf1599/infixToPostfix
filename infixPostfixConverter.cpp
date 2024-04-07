@@ -36,12 +36,13 @@ string infixToPostfix::converter(string infix) {
 			}
 			operators.pop();
 		}
-		else
+		else{
 			while (!operators.empty() && precendence(operators.top()) >= precendence(sym)) {
 				postfix += operators.top();
 				operators.pop();
 			}
-		operators.push(sym);
+			operators.push(sym);
+		}
 	}
 	while (!operators.empty()) {
 		postfix += operators.top();
