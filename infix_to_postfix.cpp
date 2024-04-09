@@ -14,9 +14,27 @@ int main()
 	cout << "postfix expression : ";
 	cout << test.converter(infix);
 	cout << endl;
-	infix = "a + b * c";
+	infix = "(a + b) * c";
 	cout << "infix expression : " << infix << endl;
 	cout << "postfix expression : ";
 	cout << test.converter(infix);
+	cout << endl;
+	infix = "( a + b ) * ( c - d )";
+	cout << "infix expression : " << infix << endl;
+	cout << "postfix expression : ";
+	cout << test.converter(infix);
+	cout << endl;
+	infix = "a + ((b + c) * (e - f) - g) / (h - i)";
+	cout << "infix expression : " << infix << endl;
+	cout << "postfix expression : ";
+	cout << test.converter(infix);
+	cout << endl;
+	infix = "a + b * (c + d) - e / f * g + h";
+	cout << "infix expression : " << infix << endl;
+	cout << "postfix expression : ";
+	cout << test.converter(infix);
+	cout << endl;
 }
+
+
 
